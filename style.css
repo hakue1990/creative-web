@@ -116,13 +116,14 @@ body {
   color: #fff;
   text-shadow: 0.1rem 0.1rem 0.2rem black;
   letter-spacing: 0.2rem;
-  height: 11rem;
+  width: 100%;
+  text-align: center;
 }
 .section--heading h1 {
-  font-size: 5rem;
+  font-size: 8rem;
 }
 .section--heading h3 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 /* End of section 1*/
 .section--2{
