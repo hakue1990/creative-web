@@ -3,11 +3,11 @@
 body::-webkit-scrollbar {
   width: 1em;
 }
- 
+
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
@@ -32,7 +32,7 @@ html {
 body {
   overflow-x: hidden;
 }
-.container{
+.container {
   overflow: hidden;
 }
 /* Start of section 1*/
@@ -65,13 +65,11 @@ body {
   font-weight: 500;
   text-align: center;
   transition: all 0.7s ease-in-out;
-
 }
 .navbar-link:hover {
- width: 13rem;
- color: var(--thrirtary);
- font-size: 1.8rem;
-
+  width: 13rem;
+  color: var(--thrirtary);
+  font-size: 1.8rem;
 }
 /*Start of section 1*/
 .section--1 {
@@ -129,7 +127,7 @@ body {
 }
 /*End of section 1*/
 /*Start of section 2*/
-.section--2{
+.section--2 {
   width: 100%;
   height: 100vh;
   background-color: white;
@@ -138,7 +136,7 @@ body {
   align-items: center;
   font-size: 3rem;
   color: white;
-  text-shadow: .2rem .2rem .2rem #333;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 .section--wrapper {
   width: 80%;
@@ -163,7 +161,7 @@ body {
   font-size: 20px;
   color: black;
   text-shadow: none;
-  width:70%;
+  width: 70%;
   letter-spacing: 3.5px;
 }
 .section--img {
@@ -171,23 +169,79 @@ body {
   justify-content: center;
   width: 50%;
 }
-.section--img img{
+.section--img img {
   height: 100%;
 }
 /*End of section 2*/
-
-.section--3{
+/*Start of section 3*/
+.section--3 {
   width: 100%;
   height: 100vh;
   background-color: var(--secondary);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  'monkey title title'
+  'monkey html css'
+  'scss js react'
+  ;
+  padding: 5rem 6rem;
+}
+.skill--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 530px;
+}
+.skill--item h3 {
+  margin: 15px;
+}
+.skill-monkey {
+  grid-area: monkey;
+  margin-right: 60px;
+}
+.skill--title {
+  grid-area: title;
+  display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
-  color: white;
-  text-shadow: .2rem .2rem .2rem #333;
+  letter-spacing: 3.5px;
 }
-.section--4{
+.scss-item {
+  grid-area: scss;
+}
+.html-item {
+  grid-area: html;
+}
+.css-item {
+  grid-area: css;
+}
+.scss-item {
+  grid-area: scss;
+}
+.js-item {
+  grid-area: js;
+}
+.react-item {
+  grid-area: react;
+}
+.section--3 h3 {
+  font-size: 35px;
+  letter-spacing: 3.5px;
+}
+.section--3 p {
+  font-size: 20px;
+  letter-spacing: 3.5px;
+}
+
+/*End of section 3*/
+
+.section--4 {
   width: 100%;
   height: 100vh;
   background-color: var(--thrirtary);
@@ -196,9 +250,9 @@ body {
   align-items: center;
   font-size: 3rem;
   color: white;
-  text-shadow: .2rem .2rem .2rem #333;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
-.section--5{
+.section--5 {
   width: 100%;
   height: 100vh;
   background-color: var(--secondary);
@@ -207,7 +261,7 @@ body {
   align-items: center;
   font-size: 3rem;
   color: white;
-  text-shadow: .2rem .2rem .2rem #333;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 @keyframes rotate {
   from {
