@@ -86,7 +86,7 @@ body {
   top: -270%;
   left: calc(50% - 70vw);
   border-radius: 45%;
-  animation: rotate 30s infinite;
+  animation: rotate 22s infinite;
 }
 .floating--background::before {
   content: '';
@@ -95,7 +95,7 @@ body {
   background-color: rgba(217, 228, 60, 0.1);
   position: absolute;
   border-radius: 43%;
-  animation: rotate 130s infinite;
+  animation: rotate 30s infinite;
 }
 .floating--background::after {
   content: '';
@@ -185,10 +185,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
-  'monkey title title'
-  'monkey html css'
+  '. title title'
+  '. html css'
   'scss js react'
   ;
+  position: relative;
   padding: 5rem 6rem;
 }
 .skill--item {
@@ -203,6 +204,9 @@ body {
 .skill-monkey {
   grid-area: monkey;
   margin-right: 60px;
+  position: absolute;
+  top: 0;
+
 }
 .skill--title {
   grid-area: title;
