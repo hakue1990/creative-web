@@ -13,7 +13,7 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 :root {
-  --primary: #8af3ff;
+  --primary: #0DC5A0;
   --secondary: #312f2f;
   --thrirtary: #ffca3a;
 }
@@ -167,10 +167,26 @@ body {
 .section--img {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 512px;
+  height:512px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.section--img:hover img.about--img{
+transform: scale(1.2);
+cursor: pointer;
 }
 .section--img img {
+  object-fit: cover;
+  width: 100%;
   height: 100%;
+  border-radius: 50%;
+  transition: transform .4s ease;
+
+
+  /* opacity: .3; */
+ 
+
 }
 /*End of section 2*/
 /*Start of section 3*/
@@ -183,7 +199,7 @@ body {
   text-shadow: 0.2rem 0.2rem 0.2rem #333;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr;
   grid-template-areas: 
   '. title title'
   '. html css'
@@ -248,7 +264,7 @@ body {
 .section--4 {
   width: 100%;
   height: 100vh;
-  background-color: var(--thrirtary);
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -261,6 +277,8 @@ body {
   font-size: 60px;
 letter-spacing: 3.5px;
 margin-bottom: 2rem;
+color: black;
+text-shadow: none;
 }
 .projects--container {
   display: flex;
@@ -271,6 +289,37 @@ margin-bottom: 2rem;
 .project--item {
   width: 50%;
   height: 50%;  
+  position: relative;
+}
+.project--item:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+
+}
+.overlay {
+  padding: 1.2rem 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity .4s ease;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.overlay span.overlay--title {
+  color: white;
+  font-size: 2.3rem;
+}
+.overlay--view {
+  font-size: 1rem;
+  position: absolute;
+  display: block;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  color: white;
 }
 .project--item img {
   width: 100%;
