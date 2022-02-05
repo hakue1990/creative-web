@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
+*, html, body {
+  overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
   width: 1em;
 }
@@ -80,6 +84,7 @@ text-shadow: 1px 2px 1px #000;
   left: calc(50% - 70vw);
   border-radius: 45%;
   animation: rotate 22s infinite;
+  /* display: none; */
 }
 .floating--background::before {
   content: '';
@@ -190,7 +195,7 @@ text-shadow: 1px 2px 1px #000;
 /*Start of section 3*/
 .section--3 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #393939;
   font-size: 3rem;
   color: white;
@@ -249,7 +254,7 @@ text-shadow: 1px 2px 1px #000;
   grid-area: react;
 }
 .section--3 h3 {
-  font-size: 35px;
+  font-size:35px;
   letter-spacing: 3.5px;
 }
 .section--3 p {
@@ -261,7 +266,7 @@ text-shadow: 1px 2px 1px #000;
 /*Start of section 4*/
 .section--4 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -327,7 +332,7 @@ text-shadow: 1px 2px 1px #000;
 /*End of section 4*/
 .section--5 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--secondary);
   display: flex;
   justify-content: space-around;
@@ -363,7 +368,6 @@ text-shadow: 1px 2px 1px #000;
   width: 80%;
   height: 2.4rem;
   position: relative;
-  overflow-x: hidden;
   margin: 0.4rem;
 }
 .form--input {
@@ -506,22 +510,28 @@ footer {
   }
 }
 @media (max-width: 600px) {
- body {
-   overflow-x: hidden;
- }
 
-
+  body {
+    width: 100vw;
+    height: 100%;
+  }
   .floating--background {
     top: -60%;
+    display: none;
   }
   .navbar {
     display: none;
+  }
+  section.section--1 {
+    padding: 0;
+    overflow-y: hidden;
   }
   .section--heading {
     flex-direction: column;
     top: 70%;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
   }
   .section--heading h1 {
     font-size: 35px;
@@ -559,26 +569,105 @@ footer {
   }
   .section--3 {
     grid-column: 1fr;
-    background-color: pink;
     grid-template-areas:
+    'title'
     'html'
-
+    'css'
+    'scss'
+    'js'
+    'react'
+    'angryMonkey'
+    ;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    
   }
   .section--3 img {
-    display: none;
+    position: relative;
+    grid-area: angryMonkey;
+    width: 370px;
+    margin-bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .section--3 h2{
     margin-top: 20px;
     font-size: 34px;
+    width: 100vw;
   }
+  img.skill-monkey {
+    position: relative;
+    width: 420px;
+    left: 42%;
+    /* left: calc(50%-150px);
+    transform: translate(-50%); */
+    /* left: 0; */
+  }
+  
   .skill--item {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 0;
     width: 100vw;
     height: 200px;
-    background-color: red;
-    margin: 0;
+    margin: 10px;
+    padding: 10px;
   }
+
+  .section--3 h3 {
+    font-size:25px;
+  }
+.skill--item p {
+  font-size: 16px;
+  text-shadow: none;
+}
+.section--4 h2{
+  margin-top: 20px;
+  font-size: 34px;
+  letter-spacing: none;
+}
+  .projects--container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .project--item {
+    width: 80%;
+    margin: 10px;
+    overflow: hidden;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay span.overlay--title{
+font-size: 24px;
+  }
+
+
+  .section--5 {
+    background-color: #fff;
+  }
+
+.contact-monkey {
+width: 230px;
+left: 10%;
+display: none;
+}
+  
+  /* reszta */
+.section--5 form {
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+  height: 560px;
+  box-shadow: none;
+}
+  .form--box {
+    background-color: pink;
+  }
+  footer {
+    display: none;
+  }
+  
 }
