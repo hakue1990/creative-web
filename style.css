@@ -35,44 +35,34 @@ body {
 .primary {
   color: var(--primary);
 }
-.container {
-  overflow: hidden;
-}
 /* Start of section 1*/
 .navbar {
-  width: 100%;
-  /* background-color: var(--secondary); */
-  height: 8vh;
-  display: flex;
-  justify-content: center;
+position: relative;
+z-index: 20;
+top: 1rem;
+display: flex;
+justify-content: space-evenly;
+
 }
-.navbar--list {
-  width: 80%;
-  z-index: 2;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+
 .navbar-link {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  word-wrap: break-word;
-  text-shadow: 0.1rem 0.1rem 0.1rem black;
-  width: 1.3rem;
-  display: inline-block;
-  position: absolute;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.7s ease-in-out;
+  font-size: 1.5rem;
+  font-weight: 700;
+letter-spacing: .2rem;
+color: #fff;
+width: 1.5rem;
+word-wrap: break-word;
+text-align: center;
+transition: all 1.3s ease;
+padding: 5px;
+position: relative;
+text-shadow: 1px 2px 1px #000;
 }
 .navbar-link:hover {
-  width: 13rem;
+  width: 15rem;
   color: var(--thrirtary);
   font-size: 1.8rem;
+  background-color: rgba(13,197,160, .4);
 }
 /*Start of section 1*/
 .section--1 {
@@ -111,8 +101,8 @@ body {
 }
 .section--heading {
   display: flex;
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 900;
@@ -135,13 +125,15 @@ body {
 /*Start of section 2*/
 .section--2 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
   color: white;
+  flex-wrap: wrap;
+
   text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 .section--wrapper {
@@ -149,9 +141,13 @@ body {
   display: flex;
   align-items: center;
   padding: 0 5rem;
+  flex-wrap: wrap;
+
 }
 .section--text {
   display: flex;
+  flex-wrap: wrap;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -176,7 +172,6 @@ body {
   width: 512px;
   height: 512px;
   border-radius: 50%;
-  overflow: hidden;
 }
 .section--img:hover img.about--img {
   transform: scale(1.2);
@@ -269,6 +264,8 @@ body {
   height: 100vh;
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
+
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -337,6 +334,8 @@ body {
   align-items: center;
   color: white;
   flex-direction: column;
+  flex-wrap: wrap;
+
   position: relative;
 }
 .contact-monkey {
@@ -350,6 +349,7 @@ body {
   width: 500px;
   height: 560px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   box-shadow: 0.1rem 0.1rem 0.1rem var(--secondary);
@@ -468,14 +468,15 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 8%;
+  width: 10%;
 }
 .footer--socials__item i {
-  font-size: 2rem;
+  font-size: 3rem;
+  transition: transform .3s ease;
 }
 .footer--socials__item i:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .fa-github:hover {
   color: #4078c0;
@@ -502,5 +503,82 @@ footer {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@media (max-width: 600px) {
+ body {
+   overflow-x: hidden;
+ }
+
+
+  .floating--background {
+    top: -60%;
+  }
+  .navbar {
+    display: none;
+  }
+  .section--heading {
+    flex-direction: column;
+    top: 70%;
+    min-height: 100vh;
+    position: relative;
+  }
+  .section--heading h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+  }
+ 
+  .section--2 {
+    padding-bottom: 30px;
+  }
+  .section--wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+  }
+  .section--text {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .section--text h2 {
+    margin-top: 40px;
+    font-size: 34px;
+  }
+  .section--text p{
+    font-size: 16px;
+  }
+  .section--img {
+  width: 300px;
+  height: 300px;
+}
+  .section--img:hover img.about--img {
+    transform: scale(1);
+  }
+  .section--3 {
+    grid-column: 1fr;
+    background-color: pink;
+    grid-template-areas:
+    'html'
+
+  }
+  .section--3 img {
+    display: none;
+  }
+  .section--3 h2{
+    margin-top: 20px;
+    font-size: 34px;
+  }
+  .skill--item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    background-color: red;
+    margin: 0;
   }
 }
