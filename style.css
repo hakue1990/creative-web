@@ -514,7 +514,6 @@ footer {
   }
   .floating--background {
     top: -60%;
-    display: none;
   }
   .navbar {
     display: none;
@@ -664,7 +663,14 @@ display: none;
     background-color: pink;
   }
   footer {
-    display: none;
+    min-height: 20vh;
+    flex-direction: column;
+    padding-top: 10px;
   }
-  
+  .footer--socials__list {
+    width: 40%;
+  }
+  .footer--socials__list i {
+    font-size: 35px;
+  }
 }
