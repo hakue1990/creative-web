@@ -226,10 +226,7 @@ nav.navbar {
   height: 512px;
   border-radius: 50%;
 }
-.section--img:hover img.about--img {
-  transform: scale(1.2);
-  cursor: pointer;
-}
+
 .section--img img {
   object-fit: cover;
   width: 100%;
@@ -539,14 +536,14 @@ a.mail--link {
   transform: scale(1.2);
 }
 .fa-github:hover {
-  color: #4078c0;
+  color: var(--primary);
 }
 .fa-envelope {
   height: 1px;
   position: relative;
 }
 .fa-linkedin:hover {
-  color: #0e76a8;
+  color: var(--primary);
 }
 @keyframes rotate {
   from {
