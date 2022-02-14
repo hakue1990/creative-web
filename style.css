@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 
 body::-webkit-scrollbar {
   width: 1em;
@@ -26,7 +26,7 @@ html {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Montserrat', 'san-serif';
+  font-family: "Montserrat", "san-serif";
   outline: none;
 }
 body {
@@ -36,6 +36,9 @@ body {
   color: var(--primary);
 }
 /* Start of section 1*/
+.navbar {
+  min-height: 7vh;
+}
 .navbar--list {
   position: relative;
   z-index: 20;
@@ -50,20 +53,27 @@ body {
   font-weight: 700;
   letter-spacing: 0.2rem;
   color: #fff;
-  width: 1.5rem;
-  word-wrap: break-word;
   text-align: center;
   transition: all 1.3s ease;
   padding: 5px;
   position: relative;
   text-shadow: 1px 2px 1px #000;
+  overflow: hidden;
+  position: relative;
 }
-.navbar-link:hover {
-  width: 15rem;
-  color: var(--thrirtary);
-  font-size: 1.8rem;
-  background-color: rgba(13, 197, 160, 0.4);
-  cursor: pointer;
+.navbar-link::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--thrirtary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.navbar-link:hover::before {
+  transform: translateX(0);
 }
 .navbar--list > .navbar-link > a {
   color: white;
@@ -89,7 +99,7 @@ body {
   animation: rotate 22s infinite;
 }
 .floating--background::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(217, 228, 60, 0.1);
@@ -98,7 +108,7 @@ body {
   animation: rotate 30s infinite;
 }
 .floating--background::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(122, 212, 134, 0.3);
@@ -118,6 +128,7 @@ body {
   letter-spacing: 0.2rem;
   width: 80%;
   justify-content: space-evenly;
+  background-color: red;
 }
 .section--heading h1 {
   font-size: 5rem;
@@ -205,9 +216,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 1fr 1fr;
   grid-template-areas:
-    '. title title'
-    '. html css'
-    'scss js react';
+    ". title title"
+    ". html css"
+    "scss js react";
   position: relative;
   padding: 5rem 6rem;
 }
@@ -227,7 +238,6 @@ body {
   left: 100px;
   top: 70px;
   width: 500px;
-  display: none;
 }
 .skill--title {
   grid-area: title;
@@ -392,7 +402,7 @@ body {
   padding-top: 0.8rem;
 }
 .form--label:before {
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background-color: var(--primary);
@@ -451,7 +461,7 @@ footer {
 }
 .form--btn::before,
 .form--btn::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -515,31 +525,18 @@ footer {
   from {
     opacity: 0;
     transform: translateX(300px);
-    
   }
   to {
     opacity: 1;
     transform: translateX(0);
-
   }
 }
 @media (max-width: 600px) {
-  .section--1{
+  .section--1 {
     overflow: hidden;
   }
-  .floating--background{
+  .floating--background {
     display: none;
-  }
-  nav.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 60px;
-    background-color: #000;
-    z-index: 2;
   }
   button.burger {
     position: absolute;
@@ -551,18 +548,18 @@ footer {
     display: block;
     z-index: 999;
   }
-  button.burger:hover{
+  button.burger:hover {
     cursor: pointer;
   }
-  button.burger.active .burger--inner{
+  button.burger.active .burger--inner {
     background: transparent;
-      }
-  button.burger.active .burger--inner::before{
-transform:   rotate(45deg);
   }
-  button.burger.active .burger--inner::after{
-    transform:  rotate(-45deg) ;
-      }
+  button.burger.active .burger--inner::before {
+    transform: rotate(45deg);
+  }
+  button.burger.active .burger--inner::after {
+    transform: rotate(-45deg);
+  }
   .burger--outer {
     width: 100%;
     height: 100%;
@@ -576,30 +573,40 @@ transform:   rotate(45deg);
     width: 100%;
     background-color: var(--thrirtary);
     position: relative;
-    transition: transform .4s ease;
-
+    transition: transform 0.4s ease;
   }
   .burger--inner:before {
-    content: '';
+    content: "";
     height: 3px;
     width: 100%;
     left: 0;
     background-color: var(--thrirtary);
     transform: translateY(-8px);
     position: absolute;
-    transition: transform .4s ease;
+    transition: transform 0.4s ease;
   }
   .burger--inner:after {
-    content: '';
+    content: "";
     height: 3px;
     width: 100%;
     left: 0;
     background-color: var(--thrirtary);
     transform: translateY(8px);
     position: absolute;
-    transition: transform .4s ease;
-
+    transition: transform 0.4s ease;
   }
+  nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: #000;
+    z-index: 2;
+  }
+
   .navbar--list {
     background-color: #000;
     right: 0;
@@ -610,28 +617,23 @@ transform:   rotate(45deg);
     flex-direction: column;
     align-items: center;
     position: fixed;
-    transition: transform .9s ease-in;
+    transition: transform 0.9s ease-in;
     position: absolute;
-
   }
   .navbar--list.active {
     transform: translateX(0);
-
   }
   .navbar-link {
     word-wrap: normal;
-    width: 100%;
     font-size: 16px;
   }
   .navbar-link:hover {
-    font-size: 16px;
     background-color: black;
     cursor: pointer;
-    width: 100%;
-
   }
+
   .navbar-link:hover > a {
-    color: var(--thrirtary)
+    color: var(--thrirtary);
   }
   .section--1 {
     padding: 0;
@@ -681,13 +683,13 @@ transform:   rotate(45deg);
   .section--3 {
     grid-column: 1fr;
     grid-template-areas:
-      'title'
-      'html'
-      'css'
-      'scss'
-      'js'
-      'react'
-      'angryMonkey';
+      "title"
+      "html"
+      "css"
+      "scss"
+      "js"
+      "react"
+      "angryMonkey";
     padding: 0;
     margin: 0;
     overflow: hidden;
