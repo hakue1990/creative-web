@@ -40,6 +40,7 @@ body {
 }
 nav.navbar {
   position: relative;
+  animation: dropIn 1.5s ease;
 }
 /* Start of section 1*/
 .navbar--list {
@@ -59,7 +60,6 @@ nav.navbar {
   text-align: center;
   transition: all 1.3s ease;
   padding: 5px;
-  text-shadow: 1px 2px 1px #000;
   overflow: hidden;
   position: relative;
 }
@@ -79,7 +79,7 @@ nav.navbar {
   transform: translateX(0);
 }
 .navbar--list > .navbar-link > a {
-  color: white;
+  color: var(--secondary);
   width: 100%;
   display: block;
   height: 100%;
@@ -402,7 +402,9 @@ nav.navbar {
   flex-direction: column;
   align-items: center;
   box-shadow: 0.1rem 0.1rem 0.1rem var(--secondary);
+  position: relative;
 }
+
 .form h3 {
   color: #312f2f;
   padding-bottom: 2rem;
@@ -538,9 +540,9 @@ a.mail--link {
 .fa-github:hover {
   color: var(--primary);
 }
-.fa-envelope {
-  height: 1px;
-  position: relative;
+.fa-paper-plane:hover {
+  transform: scale(1.5);
+  color: var(--primary);
 }
 .fa-linkedin:hover {
   color: var(--primary);
@@ -551,6 +553,14 @@ a.mail--link {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes dropIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 @keyframes fadeIn {
@@ -645,12 +655,13 @@ a.mail--link {
     align-items: center;
     width: 100vw;
     height: 60px;
-    background-color: #000;
+    /* background-color: var(--primary); */
     z-index: 2;
   }
 
   .navbar--list {
-    background-color: #000;
+    background-color: var(--primary);
+
     right: 0;
     top: 0;
     transform: translateX(100%);
@@ -668,18 +679,14 @@ a.mail--link {
   .navbar-link {
     word-wrap: normal;
     font-size: 16px;
-  }
-  .navbar-link:hover {
-    background-color: black;
-    cursor: pointer;
+    text-shadow: none;
   }
 
-  .navbar-link:hover > a {
-    color: var(--thrirtary);
+  li.navbar-link a {
+    color: black !important;
   }
   .section--1 {
     padding: 0;
-    /* display: none; */
   }
   .section--heading {
     flex-direction: column;
@@ -690,8 +697,11 @@ a.mail--link {
   }
   .section--heading h1 {
     font-size: 35px;
-    position: absolute;
+    position: relative;
     top: 0;
+  }
+  .section--heading--textbox h4 {
+    position: relative;
   }
 
   .section--2 {
@@ -821,7 +831,7 @@ a.mail--link {
   footer {
     min-height: 20vh;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 30px;
   }
   .footer--copyright {
     font-size: 14px;
@@ -832,5 +842,8 @@ a.mail--link {
   }
   .footer--socials__list i {
     font-size: 35px;
+  }
+  .footer--phone {
+    font-size: 16px;
   }
 }
