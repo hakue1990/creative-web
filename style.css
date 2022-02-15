@@ -687,19 +687,22 @@ a.mail--link {
   }
   .section--1 {
     padding: 0;
+    overflow: hidden;
   }
   .section--heading {
     flex-direction: column;
-    top: 70%;
-    min-height: 100vh;
-    position: relative;
+    height: 100%;
     overflow: hidden;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 200px;
   }
+
   .section--heading h1 {
     font-size: 35px;
-    position: relative;
-    top: 0;
   }
+
   .section--heading--textbox h4 {
     position: relative;
   }
