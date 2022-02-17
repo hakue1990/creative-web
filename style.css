@@ -11,17 +11,14 @@
   bottom: 15px;
   right: 35px;
   transition: all 1s ease;
-  transform: scale(1.2);
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(100px);
 }
 #scrollToTopBtn i {
   font-size: 23px;
-}
-.hide {
-  opacity: 0;
 }
 body::-webkit-scrollbar {
   width: 1em;
@@ -607,6 +604,9 @@ a.mail--link {
   }
 }
 @media (max-width: 600px) {
+  #scrollToTopBtn {
+    display: none;
+  }
   .section--1 {
     overflow: hidden;
   }

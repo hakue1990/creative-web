@@ -2,7 +2,10 @@ const btn = document.querySelector('.burger');
 const list = document.querySelector('.navbar--list');
 const listItems = document.querySelectorAll('.navbar--list li > a');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-var rootElement = document.documentElement;
+const rootElement = document.documentElement;
+
+//menu links show delay
+
 btn.addEventListener('click', () => {
   list.classList.toggle('active');
   btn.classList.toggle('active');
@@ -15,9 +18,10 @@ btn.addEventListener('click', () => {
   });
 });
 
+// Scroll to top logic
+
 scrollToTopBtn.addEventListener('click', scrollToTop);
 function scrollToTop() {
-  // Scroll to top logic
   rootElement.scrollTo({
     top: 0,
     behavior: 'smooth',
@@ -27,10 +31,10 @@ function scrollToTop() {
 function handleScroll() {
   const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
 
-  if (rootElement.scrollTop / scrollTotal < 0.4) {
-    scrollToTopBtn.classList.add('hide');
+  if (rootElement.scrollTop / scrollTotal < 0.2) {
+    scrollToTopBtn.style.transform = 'translateX(100px)';
   } else {
-    scrollToTopBtn.classList.remove('hide');
+    scrollToTopBtn.style.transform = 'translateX(0)';
   }
 }
 document.addEventListener('scroll', handleScroll);
