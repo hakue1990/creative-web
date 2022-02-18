@@ -335,7 +335,6 @@ nav.navbar {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -354,7 +353,6 @@ nav.navbar {
   display: flex;
   flex-wrap: wrap;
   width: 1040px;
-  height: 678px;
 }
 .project--item {
   width: 50%;
