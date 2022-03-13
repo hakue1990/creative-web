@@ -20,6 +20,9 @@
 #scrollToTopBtn i {
   font-size: 23px;
 }
+#scrollToTopBtn:hover {
+  background-color: var(--primary);
+}
 body::-webkit-scrollbar {
   width: 1em;
 }
@@ -599,6 +602,62 @@ a.mail--link {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@media (max-width: 1600px) {
+  .floating--background {
+    top: -110vh;
+  }
+  .section--heading {
+    top: 520px;
+  }
+  .section--heading--textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+  .section--heading--textbox h1 {
+    font-size: 45px;
+  }
+  .section--heading--textbox h4 {
+    font-size: 22px;
+  }
+  .section--wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px 0;
+  }
+  .section--text {
+    width: 100%;
+    min-height: 450px;
+  }
+  .section--img {
+    background-color: blue;
+  }
+  .section--3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-monkey {
+    display: none;
+  }
+  .skill--item {
+    margin: 40px;
+    width: 100%;
+    padding: 10px;
+  }
+  .section--4 {
+    min-height: 100vh;
+    padding: 40px;
+  }
+  .projects--container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 600px) {
