@@ -12,16 +12,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
   </head>
   <body>
     <!--Start of section 1-->
     <div class="floating--background"></div>
     <section class="section--1">
-
       <nav class="navbar">
         <ul class="navbar--list">
-          <li class="navbar-link"><a href="#about">About</li></a>
+          <li class="navbar-link"><a href="#about" class="x">About</a></li>
           <li class="navbar-link"><a href="#skills">Skills</a></li>
           <li class="navbar-link"><a href="#projects">Projects</a></li>
           <li class="navbar-link"><a href="#contact">Contact</a></li>
@@ -34,12 +33,12 @@
       </nav>
       <div class="section--heading">
         <div class="section--heading--textbox">
-          <h1> <span class='yellow'>I</span> create amazing</h1> 
-          <h1> <span class='yellow'>E</span>xpiriences.</h1>
-          <h4>I code apps and create web</h4>
-      <a class='section--heading--button'href="#projects">See my works!</a>
+          <h1><span class="yellow">Web</span> developer</h1>
+          <h1><span class="yellow">without</span> headaches.</h1>
+          <h4><span class="yellow">I</span> code apps and create web.</h4>
+          <a class="section--heading--button" href="#projects">See my works!</a>
         </div>
-  
+
         <img src="./img/hero image.png" alt="monkey img" class="hero-img" />
       </div>
     </section>
@@ -50,53 +49,21 @@
         <div class="section--text">
           <h2>little <span style="color: #0dc5a0">about</span> me</h2>
           <p>
-            My name is <b>Adam</b>, I am passionate about web technologies, I learn Javascript on a daily basis. I'm a computer science student. I work in one of the Hosting providers, in my spare time I play guitar and train Yoga. i like going out to thai restaurant and reading fantasy books on my hammock during summer.
+            My name is <b>Adam</b>, I am passionate about web technologies, I
+            learn Javascript on a daily basis. I'm a computer science student. I
+            work in one of the Hosting providers, in my spare time I play guitar
+            and train Yoga. i like going out to thai restaurant and reading
+            fantasy books on my hammock during summer.
           </p>
         </div>
-        <div class="section--img">
-          <img src="./img/about image.jpg" class="about--img" alt="about" />
-        </div>
+        <div class="section--img"></div>
       </div>
     </section>
     <!--End of section 2-->
     <!--Start of section 3-->
     <section class="section--3" id="skills">
-      <img src="./img/skillsface.png" alt="skill monkey" class="skill-monkey" />
+      <!-- <img src="./img/skillsface.png" alt="skill monkey" class="skill-monkey" /> -->
       <h2 class="skill--title">S<span style="color: #0dc5a0">kill</span>set</h2>
-      <div class="skill--item scss-item">
-        <h3>scss</h3>
-        <p>
-          Sass also allows me to nest selectors, create your own functions, loops, conditional statements, makes it much easier to write code and increases its readability.
-        </p>
-      </div>
-
-      <div class="skill--item html-item">
-        <h3>html</h3>
-        <p>
-          HyperText Markup Language - its nothing new for me, I know how to build semantic layouts of web applications.
-        </p>
-      </div>
-      <div class="skill--item css-item">
-        <h3>css</h3>
-        <p>
-          I know how to make the website look like or know how to position elements, flexbox and grid - they are nothing new to me.
-        </p>
-      </div>
-      <div class="skill--item js-item">
-        <h3>javascript</h3>
-        <p>it's my favorite programming language, it makes pages dynamic. I know his functional and object-oriented concepts.
-
-
-        </p>
-      </div>
-      <div class="skill--item react-item">
-        <h3>react</h3>
-        <p>
-          React is known as the JavaScript library for building user interfaces. It enables the creation of complex interfaces using small, isolated components.
-
-
-        </p>
-      </div>
     </section>
     <!--End of section 3-->
     <!--Start of section 4-->
@@ -106,55 +73,82 @@
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">food website</span>
-            <a href="https://food.szulinek.pl"target='blank' class="overlay--view"
+            <a
+              href="https://food.szulinek.pl"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
           </div>
-          <img src="./img/projects/food.szulinek.pl.jpg" alt="food.szulinek.pl" />
+          <img
+            src="./img/projects/food.szulinek.pl.jpg"
+            alt="food.szulinek.pl"
+          />
         </div>
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">beatmaker</span>
-            <a href="https://beatmaker.szulinek.pl"target='blank' class="overlay--view"
+            <a
+              href="https://beatmaker.szulinek.pl"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
           </div>
-          <img src="./img/projects/beatmaker.szulinek.pl.jpg" alt="beatmaker.szulinek.pl" />
+          <img
+            src="./img/projects/beatmaker.szulinek.pl.jpg"
+            alt="beatmaker.szulinek.pl"
+          />
         </div>
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">Card</span>
-            <a href="https://card.szulinek.pl"target='blank' class="overlay--view"
+            <a
+              href="https://card.szulinek.pl"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
           </div>
-          <img src="./img/projects/card.szulinek.pl.jpg" alt="card.szulinek.pl" />
+          <img
+            src="./img/projects/card.szulinek.pl.jpg"
+            alt="card.szulinek.pl"
+          />
         </div>
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">React todo app</span>
-            <a href="https://hakue1990.github.io/firebasetodoapp/"target='blank' class="overlay--view"
+            <a
+              href="https://hakue1990.github.io/firebasetodoapp/"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
-              </div>
+          </div>
           <img src="./img/projects/react todo app.jpg" alt="react todo app" />
         </div>
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">JS calculator</span>
-            <a href="https://calc.szulinek.pl"target='blank' class="overlay--view"
+            <a
+              href="https://calc.szulinek.pl"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
-              </div>
+          </div>
           <img src="./img/projects/calc.szulinek.pl.jpg" alt="react todo app" />
         </div>
         <div class="project--item">
           <div class="overlay">
             <span class="overlay--title">photobax</span>
-            <a href="https://photobax.szulinek.pl"target='blank' class="overlay--view"
+            <a
+              href="https://photobax.szulinek.pl"
+              target="blank"
+              class="overlay--view"
               >View Project <i class="fas fa-arrow-circle-right"></i
             ></a>
-              </div>
+          </div>
           <img src="./img/projects/photobax.szulinek.pl.jpg" alt="photobax" />
         </div>
       </div>
@@ -222,14 +216,27 @@
     </section>
     <!--End of section 5-->
     <footer>
-      <p class="footer--copyright">&copy; Copyright 2022 Adam Hałdaś <a href='mailto:adam.haldas@gmail.com' class='mail--link'><i class="fa-solid fa-paper-plane"></i></a></p>
+      <p class="footer--copyright">
+        &copy; Copyright 2022 Adam Hałdaś
+        <a href="mailto:adam.haldas@gmail.com" class="mail--link"
+          ><i class="fa-solid fa-paper-plane"></i
+        ></a>
+      </p>
       <p class="footer--phone">+48 736 082 373</p>
       <ul class="footer--socials__list">
-        <a href="https://github.com/hakue1990" target="blank" ><li class="footer--socials__item"><i class="fab fa-github"></i></li></a>
- 
-        <a href="https://www.linkedin.com/in/adam-ha%C5%82da%C5%9B-49616a183/"target="blank"><li class="footer--socials__item"><i class="fab fa-linkedin"></i></li></a>
+        <a href="https://github.com/hakue1990" target="blank"
+          ><li class="footer--socials__item"><i class="fab fa-github"></i></li
+        ></a>
+
+        <a
+          href="https://www.linkedin.com/in/adam-ha%C5%82da%C5%9B-49616a183/"
+          target="blank"
+          ><li class="footer--socials__item"><i class="fab fa-linkedin"></i></li
+        ></a>
       </ul>
-      <button id="scrollToTopBtn"><i class="fa-solid fa-circle-chevron-up"></i></button>
+      <button id="scrollToTopBtn">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+      </button>
     </footer>
     <script src="js.js"></script>
   </body>

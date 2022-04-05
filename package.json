@@ -1,0 +1,23 @@
+{
+  "name": "creative-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakue1990/creative-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hakue1990/creative-web/issues"
+  },
+  "homepage": "https://github.com/hakue1990/creative-web#readme",
+  "devDependencies": {
+    "sass": "^1.49.11"
+  }
+}

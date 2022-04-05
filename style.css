@@ -604,12 +604,15 @@ a.mail--link {
     transform: translateX(0);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   #scrollToTopBtn {
     display: none;
   }
-  .section--1 {
-    overflow: hidden;
+  .section--heading {
+    align-items: center;
+  }
+  .hero-img {
+    width: 260px;
   }
   .floating--background {
     display: none;
@@ -859,7 +862,7 @@ a.mail--link {
     background-color: pink;
   }
   footer {
-    min-height: 20vh;
+    min-height: 30vh;
     flex-direction: column;
     padding-top: 30px;
   }
@@ -877,16 +880,28 @@ a.mail--link {
     font-size: 16px;
   }
 }
-@media (min-width: 601px) and (max-width: 1200px) {
-  .projects--container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media (min-width: 768px) and (max-width: 959px) {
+  .x {
+    color: white;
+  }
+  .section--heading {
+    /* position: absolute; */
     width: 100%;
+    /* background-color: pink; */
+    bottom: 300px;
+  }
+  .section--heading--textbox {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .section--heading--textbox > h1 {
+    font-size: 38px;
   }
 }
 
-@media (min-width: 1201px) and(max-width: 1600px) {
+/* @media (min-width: 1201px) and(max-width: 1600px) {
   .floating--background {
     top: -110vh;
   }
@@ -941,4 +956,4 @@ a.mail--link {
     height: 100%;
     align-items: center;
   }
-}
+}  */
