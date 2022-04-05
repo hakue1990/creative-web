@@ -182,10 +182,44 @@ body {
     min-height: 100vh;
     background-color: #312f2f;
     text-align: center;
-    padding-top: 50px; }
+    padding-top: 20px;
+    padding-bottom: 30px; }
     body .section--3 h2 {
       font-size: 48px;
-      letter-spacing: 4px;
-      color: #fff; }
+      letter-spacing: 3px;
+      color: #fff;
+      margin-bottom: 30px; }
+    body .section--3 .cards {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 50px; }
+      body .section--3 .cards .card {
+        background-color: black;
+        width: 400px;
+        color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(167, 201, 196, 0.432);
+        margin: 15px; }
+        body .section--3 .cards .card--wrapper {
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          position: relative; }
+          body .section--3 .cards .card--wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 20px 20px 0 0; }
+          body .section--3 .cards .card--wrapper .card--overlay {
+            border-radius: 20px 20px 0 0;
+            position: absolute;
+            mix-blend-mode: overlay;
+            background-color: #0dc5a0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0; }
+        body .section--3 .cards .card--details {
+          padding: 20px; }
+          body .section--3 .cards .card--details h3 {
+            margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */
