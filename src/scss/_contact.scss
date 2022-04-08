@@ -171,3 +171,8 @@ footer {
 }
 //end footer
 //end section 5
+@media (max-width: 600px) {
+  .section--5 {
+    overflow-x: hidden;
+  }
+}
