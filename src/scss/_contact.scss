@@ -1,6 +1,8 @@
+@use './utils/colors';
+
 //start section 5
 .section--5 {
-  background-color: $thrirtary;
+  background-color: colors.$thrirtary;
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -24,7 +26,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--secondary);
+    box-shadow: 0.1rem 0.1rem 0.1rem black;
     position: relative;
     h3 {
       color: #312f2f;
@@ -50,7 +52,7 @@
         &:focus + .form--label .form--text,
         &:valid + .form--label .form--text {
           transform: translateY(-13px);
-          color: $primary;
+          color: colors.$primary;
           font-size: 13px;
         }
         &:focus + .form--label::before,
@@ -73,7 +75,7 @@
           bottom: -2px;
           width: 100%;
           height: 3px;
-          background-color: $primary;
+          background-color: colors.$primary;
           position: absolute;
           transform: translateX(-100%);
           transition: transform 0.3s ease;
@@ -124,7 +126,7 @@ footer {
     font-size: 20px;
     letter-spacing: 3px;
     .mail--link {
-      color: $secondary;
+      color: colors.$secondary;
     }
   }
   .footer--phone {
@@ -137,9 +139,9 @@ footer {
     font-size: 35px;
     justify-content: space-around;
     i {
-      color: $secondary;
+      color: colors.$secondary;
       &:hover {
-        color: $primary;
+        color: colors.$primary;
       }
     }
   }
@@ -158,12 +160,12 @@ footer {
     justify-content: center;
     align-items: center;
     transform: translateX(100px);
-    background-color: $secondary;
+    background-color: colors.$secondary;
     i {
       font-size: 24px;
     }
     &:hover {
-      background-color: $primary;
+      background-color: colors.$secondary;
     }
   }
 }
