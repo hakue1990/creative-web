@@ -1,0 +1,43 @@
+//start section 2 ABOUT ME
+.section--2 {
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  .section--wrapper {
+    display: flex;
+    .section--text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // background-color: pink;
+      padding: 0 20px;
+      h2 {
+        margin-bottom: 20px;
+        font-size: 48px;
+        letter-spacing: 3px;
+      }
+      p {
+        width: 500px;
+        font-size: 25px;
+      }
+    }
+    .section--img {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 50%;
+      width: 600px;
+      height: 600px;
+      background: url('../../img/about\ image.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 8px solid black;
+      margin-left: 80px;
+    }
+  }
+}
+//end section 2 ABOUT ME
