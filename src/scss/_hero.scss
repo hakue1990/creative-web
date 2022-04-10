@@ -1,4 +1,5 @@
 @use './utils/colors' as *;
+@use './utils/sizes';
 
 @media (max-width: 600px) {
   .section--1 {
@@ -21,6 +22,9 @@
       border: none;
       z-index: 1;
       background: transparent;
+      &:hover {
+        cursor: pointer;
+      }
       &.active .burger--inner {
         background: transparent;
       }
@@ -94,8 +98,10 @@
         color: #fff;
         display: block;
         position: relative;
-        overflow-x: hidden;
         font-weight: bold;
+        z-index: 20;
+        overflow-x: hidden;
+
         &::before {
           content: '';
           width: 100%;

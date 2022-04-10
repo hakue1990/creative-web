@@ -1,6 +1,7 @@
 @use './utils/colors';
 
 //start section 5
+
 .section--5 {
   background-color: colors.$thrirtary;
   min-height: 100vh;
@@ -141,7 +142,7 @@ footer {
     i {
       color: colors.$secondary;
       &:hover {
-        color: colors.$primary;
+        color: red;
       }
     }
   }
@@ -174,5 +175,18 @@ footer {
 @media (max-width: 600px) {
   .section--5 {
     overflow-x: hidden;
+    background-color: #fff;
+    form.form {
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+  footer {
+    flex-direction: column;
+    min-height: 200px;
+    align-items: center;
+    .footer--copyright {
+      font-size: 16px;
+    }
   }
 }

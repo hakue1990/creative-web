@@ -1,5 +1,5 @@
 @use './utils/colors';
-
+@use './utils/sizes';
 //start section 3 CARDS
 .section--3 {
   min-height: 100vh;
@@ -8,7 +8,7 @@
   padding-top: 20px;
   padding-bottom: 30px;
   h2 {
-    font-size: 34px;
+    font-size: sizes.$hearderSize;
     letter-spacing: 3px;
     color: #fff;
     margin-bottom: 30px;

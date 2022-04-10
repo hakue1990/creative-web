@@ -21,6 +21,9 @@
     z-index: 1;
     background: transparent;
   }
+  .section--1 .burger:hover {
+    cursor: pointer;
+  }
   .section--1 .burger.active .burger--inner {
     background: transparent;
   }
@@ -92,8 +95,9 @@
     color: #fff;
     display: block;
     position: relative;
-    overflow-x: hidden;
     font-weight: bold;
+    z-index: 20;
+    overflow-x: hidden;
   }
   .section--1 .navbar--list .navbar-link a::before {
     content: "";
@@ -231,64 +235,61 @@
   margin-bottom: 10px;
 }
 
-.section--4 {
-  min-height: 100vh;
-  padding: 30px 0 50px 0;
+@media (max-width: 600px) {
+  .section--4 {
+    min-height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .section--4 h2 {
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #312f2f;
+    margin-bottom: 30px;
+  }
+  .section--4 .projects--container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .section--4 .projects--container a.project--item {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 200px;
+    margin: 5px;
+  }
+  .section--4 .projects--container a.project--item:hover .overlay {
+    opacity: 1;
+  }
+  .section--4 .projects--container a.project--item img {
+    width: 100%;
+    height: 100%;
+  }
+  .section--4 .projects--container a.project--item .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    background-color: #0dc5a0;
+    transition: opacity 0.3s ease;
+    padding-top: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .section--4 .projects--container a.project--item .overlay span.overlay--title {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
-.section--4 h2 {
-  font-size: 34px;
-  color: #333;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.section--4 .projects--container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.section--4 .projects--container .project--item {
-  width: 40%;
-  background-image: url("./img/projects/beatmaker.szulinek.pl.jpg");
-  background-size: cover;
-  height: 400px;
-  width: 40%;
-  position: relative;
-}
-.section--4 .projects--container .project--item:hover .overlay {
-  opacity: 1;
-}
-.section--4 .projects--container .project--item .overlay {
-  width: 100%;
-  height: 100%;
-  background-color: #0dc5a0;
-  opacity: 0;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  transition: opacity 0.3s ease;
-}
-.section--4 .projects--container .project--item .overlay span {
-  font-size: 32px;
-  color: #fff;
-}
-.section--4 .projects--container .project--item .overlay a {
-  position: relative;
-  font-size: 24px;
-  bottom: 10px;
-  text-decoration: none;
-  color: #fff;
-}
-.section--4 .projects--container .project--item img {
-  width: 100%;
-  height: 100%;
-}
-
 .section--5 {
   background-color: #312f2f;
   min-height: 100vh;
@@ -422,7 +423,7 @@ footer .footer--socials__list i {
   color: #ffca3a;
 }
 footer .footer--socials__list i:hover {
-  color: #0dc5a0;
+  color: red;
 }
 footer #scrollToTopBtn {
   border: none;
@@ -451,6 +452,20 @@ footer #scrollToTopBtn:hover {
 @media (max-width: 600px) {
   .section--5 {
     overflow-x: hidden;
+    background-color: #fff;
+  }
+  .section--5 form.form {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  footer {
+    flex-direction: column;
+    min-height: 200px;
+    align-items: center;
+  }
+  footer .footer--copyright, footer .footer--phone {
+    font-size: 16px;
   }
 }
 *,
