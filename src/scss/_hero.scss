@@ -1,160 +1,237 @@
-@use './utils/colors' as *;
-@use './utils/sizes';
+@use "./utils/colors" as *;
+@use "./utils/sizes";
+.section--1 {
+  background-color: $thrirtary;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: hidden;
+  padding-left: 15px;
+  position: relative;
 
-@media (max-width: 600px) {
-  .section--1 {
-    background-color: $thrirtary;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    overflow-x: hidden;
-    padding-left: 15px;
-    position: relative;
-
-    .burger {
-      width: 30px;
-      height: 30px;
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      border: none;
-      z-index: 1;
+  .burger {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: none;
+    z-index: 1;
+    background: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active .burger--inner {
       background: transparent;
-      &:hover {
-        cursor: pointer;
-      }
-      &.active .burger--inner {
-        background: transparent;
-      }
-      &.active .burger--inner::before {
-        transform: rotate(45deg);
-      }
-      &.active .burger--inner::after {
-        transform: rotate(-45deg);
-      }
-      &--outer {
-        display: block;
+    }
+    &.active .burger--inner::before {
+      transform: rotate(45deg);
+    }
+    &.active .burger--inner::after {
+      transform: rotate(-45deg);
+    }
+    &--outer {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .burger--inner {
+        position: absolute;
         width: 100%;
-        height: 100%;
-        position: relative;
-        .burger--inner {
-          position: absolute;
+        height: 3px;
+        background-color: $secondary;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.5s ease;
+        &::before {
+          content: "";
+          transition: all 0.4s ease;
+
           width: 100%;
           height: 3px;
+          transform: translateY(-8px);
+          position: absolute;
           background-color: $secondary;
           left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: all 0.5s ease;
-          &::before {
-            content: '';
-            transition: all 0.4s ease;
+          top: 0;
+        }
+        &::after {
+          content: "";
+          transition: all 0.4s ease;
 
-            width: 100%;
-            height: 3px;
-            transform: translateY(-8px);
-            position: absolute;
-            background-color: $secondary;
-            left: 0;
-            top: 0;
-          }
-          &::after {
-            content: '';
-            transition: all 0.4s ease;
-
-            width: 100%;
-            height: 3px;
-            transform: translateY(8px);
-            position: absolute;
-            background-color: $secondary;
-            left: 0;
-            top: 0;
-          }
+          width: 100%;
+          height: 3px;
+          transform: translateY(8px);
+          position: absolute;
+          background-color: $secondary;
+          left: 0;
+          top: 0;
         }
       }
     }
-    .navbar--list {
-      position: fixed;
-      right: 0;
-      top: 0;
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 100vh;
-      transform: translateX(100%);
-      background-color: $primary;
-      z-index: 1;
-      transition: transform 0.3s ease;
-      list-style-type: none;
-      &.active {
+  }
+  .navbar--list {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: $primary;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    list-style-type: none;
+    &.active {
+      transform: translateX(0);
+    }
+    .navbar-link a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      position: relative;
+      font-weight: bold;
+      z-index: 20;
+      overflow-x: hidden;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: $secondary;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      &:hover::before {
         transform: translateX(0);
       }
-      .navbar-link a {
-        text-decoration: none;
-        color: #fff;
-        display: block;
-        position: relative;
-        font-weight: bold;
-        z-index: 20;
-        overflow-x: hidden;
+    }
+  }
+  .yellow {
+    color: $secondary;
+  }
+  img {
+    width: 300px;
+    animation: 0.9s linear my-animation;
 
-        &::before {
-          content: '';
-          width: 100%;
-          height: 3px;
-          position: absolute;
-          background-color: $secondary;
-          left: 0;
-          bottom: 0;
-          transform: translateX(-100%);
-          transition: transform 0.3s ease;
-        }
-        &:hover::before {
-          transform: translateX(0);
-        }
+    position: relative;
+    top: 100px;
+  }
+  h1 {
+    font-size: 34px;
+    color: #fff;
+  }
+  h2 {
+    margin-top: 15px;
+    font-size: 17px;
+    color: #fff;
+  }
+  .section--heading--button {
+    margin-top: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: none;
+    display: block;
+    padding: 13px 20px;
+    background-color: $primary;
+    color: black;
+    border: 1px solid black;
+    position: relative;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+//Phone
+
+@media (min-width: 601px) and (max-width: 959px) {
+  .section--1 {
+    background-color: $thrirtary;
+    overflow-x: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    nav {
+      .navbar--list {
+        left: 0;
+        top: 0;
+        transform: translate(0);
+        flex-direction: row;
+        height: 8vh;
+        width: 100%;
+        background: transparent;
+        position: absolute;
+      }
+      .burger {
+        display: none;
       }
     }
-    .yellow {
-      color: $secondary;
-    }
-    img {
+    img.hero-img {
       width: 300px;
-
-      position: relative;
-      top: 100px;
+      top: 0;
     }
-    h1 {
-      font-size: 34px;
-      color: #fff;
-    }
-    h2 {
-      margin-top: 15px;
-      font-size: 17px;
-      color: #fff;
-    }
-    .section--heading--button {
-      margin-top: 40px;
-      color: white;
-      font-size: 16px;
-      font-weight: 400;
-      text-shadow: none;
-      display: block;
-      padding: 13px 20px;
-      background-color: $primary;
-      color: black;
-      border: 1px solid black;
-      position: relative;
-      width: 180px;
-      text-align: center;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      &:hover {
-        background-color: $secondary;
+  }
+}
+//DESKTOP
+@media (min-width: 960px) {
+  .section--1 {
+    background-color: $thrirtary;
+    overflow-x: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    nav {
+      .navbar--list {
+        left: 0;
+        top: 0;
+        transform: translate(0);
+        flex-direction: row;
+        height: 8vh;
+        width: 100%;
+        background: transparent;
+        position: absolute;
+      }
+      .burger {
+        display: none;
       }
     }
+    .section--heading--textbox {
+      h1 {
+        font-size: 64px;
+      }
+      h2 {
+        font-size: 34px;
+      }
+    }
+    img.hero-img {
+      width: 400px;
+      top: 0;
+    }
+  }
+}
+
+@keyframes my-animation {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0);
   }
 }

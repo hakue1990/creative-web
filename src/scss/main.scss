@@ -1,5 +1,5 @@
-@use './index';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@use "./index";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 
 *,
 *::before,
@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   .outerDiv {
     position: absolute;
     width: 100%;
@@ -38,7 +38,7 @@ body {
       top: -1650px;
       animation: rotate 35s ease infinite;
       &::before {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         background-color: rgba(70, 77, 158, 0.3);
@@ -48,7 +48,7 @@ body {
         animation: rotate 35s ease infinite;
       }
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         background-color: rgba(71, 158, 173, 0.432);
@@ -66,5 +66,55 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 959px) {
+  body {
+    font-family: "Montserrat", sans-serif;
+    .outerDiv {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      .innerDiv {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 90px;
+        width: 100vw;
+      }
+      .floating--background {
+        width: 1800px;
+        height: 1800px;
+        z-index: 1;
+        position: absolute;
+        left: 220px;
+        background-color: rgba(66, 68, 90, 0.6);
+        left: calc(50% - 900px);
+        bottom: -300px;
+        border-radius: 50%;
+        top: -1780px;
+        animation: rotate 35s ease infinite;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(70, 77, 158, 0.3);
+
+          position: absolute;
+          border-radius: 45%;
+          animation: rotate 35s ease infinite;
+        }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(71, 158, 173, 0.432);
+          position: absolute;
+          border-radius: 43%;
+          animation: rotate 60s ease infinite;
+        }
+      }
+    }
   }
 }
