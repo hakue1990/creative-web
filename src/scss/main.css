@@ -91,7 +91,7 @@
 }
 .section--1 .navbar--list .navbar-link a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
   display: block;
   position: relative;
   font-weight: bold;
@@ -171,6 +171,9 @@
     background: transparent;
     position: absolute;
   }
+  .section--1 nav .navbar--list .navbar-link a {
+    color: #fff;
+  }
   .section--1 nav .burger {
     display: none;
   }
@@ -197,6 +200,9 @@
     width: 100%;
     background: transparent;
     position: absolute;
+  }
+  .section--1 nav .navbar--list .navbar-link a {
+    color: #fff;
   }
   .section--1 nav .burger {
     display: none;
@@ -676,6 +682,13 @@ footer .footer--copyright, footer .footer--phone {
 footer .footer--copyright .mail--link, footer .footer--phone .mail--link {
   color: #ffca3a;
 }
+footer .footer--copyright .fa-paper-plane, footer .footer--phone .fa-paper-plane {
+  transition: transform 0.2s ease-out;
+}
+footer .footer--copyright .fa-paper-plane:hover, footer .footer--phone .fa-paper-plane:hover {
+  color: #0dc5a0;
+  transform: scale(1.2);
+}
 footer .footer--socials__list {
   list-style-type: none;
   display: flex;
@@ -698,19 +711,19 @@ footer #scrollToTopBtn {
   width: 48px;
   bottom: 15px;
   right: 35px;
-  transition: all 1s ease;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: translateX(100px);
   background-color: #ffca3a;
+  transition: all 0.7s ease;
 }
 footer #scrollToTopBtn i {
   font-size: 24px;
 }
 footer #scrollToTopBtn:hover {
-  background-color: #ffca3a;
+  background-color: #0dc5a0;
 }
 
 @media (max-width: 600px) {
